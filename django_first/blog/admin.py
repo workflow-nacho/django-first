@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Post
 
-# Register your models here.
+# Registering module to could see models in the admin GUI site
+admin.site.register(Post)
