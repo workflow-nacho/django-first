@@ -122,4 +122,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4' # NOw we have to load it where we want to use it. load crispy_forms_tags
+# Now we have to load it where we want to use it. load crispy_forms_tags
+CRISPY_TEMPLATE_PACK = 'bootstrap4' 
+
+# Redirect to homepage after successfully login
+LOGIN_REDIRECT_URL = 'blog-home'
+
+# Setting to redirect to the custom login page
+LOGIN_URL = 'login'
