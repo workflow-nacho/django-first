@@ -122,6 +122,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Media root where we go to save media files and media url route
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = '/media/'
+
 # Now we have to load it where we want to use it. load crispy_forms_tags
 CRISPY_TEMPLATE_PACK = 'bootstrap4' 
 

@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import include, path
 from users import views as user_views
 
@@ -27,3 +29,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('', include('blog.urls')),
 ]
+
+if settings.DEBUG:
+    # https://docs.djangoproject.com/en/2.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
