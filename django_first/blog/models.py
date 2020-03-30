@@ -20,8 +20,8 @@ from django.urls import reverse
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
-    # Excat time when post is created. 
-    # Passing function now withow parenthesis in rder to execute it when we add the post
+    # Exact time when post is created. 
+    # Passing function now withow parenthesis in render to execute it when we add the post
     date_posted = models.DateTimeField(default=timezone.now) 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 

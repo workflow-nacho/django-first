@@ -23,6 +23,7 @@ class PostListView(ListView):
     template_name = 'blog/home.html' # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
+    paginate_by = 2
 
 # Creating view for individual detail view importing Detailview
 class PostDetailView(DetailView):
