@@ -39,6 +39,8 @@
                   <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                 {% else %}
                   <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                  <a class="nav-item nav-link" href="{% url 'social:begin' 'facebook' %}">Login Facebook</a>
+                  <a class="nav-item nav-link" href="#">Login Google</a>
                   <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
                 {% endif %}
               </div>
